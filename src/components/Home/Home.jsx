@@ -1,49 +1,22 @@
-import {Component} from "react";
+import './static/Home.css';
 import {Link, NavLink, useNavigate} from "react-router-dom";
-import Login from "../Auth/Login/Login";
-import Button from "bootstrap/js/src/button";
+import { ReactComponent as Logo } from "./static/undraw_online_cv_re_gn0a.svg";
+import Navbar from "../Auth/Navbar";
 
-
-// class Home extends Component {
-//
-//     render() {
-//
-//         // eslint-disable-next-line react-hooks/rules-of-hooks
-//         const navigate = useNavigate()
-//         // const navigateToLogin = () => {
-//         //     navigate("/login", {replace: true});
-//         // };
-//         function send () {
-//             navigate("/login")
-//         }
-//
-//         return (
-//             <div className="container">
-//                 <h1>CV Gen React App</h1>
-//                 <hr/>
-//
-//
-//                 <button onClick={() => send()}>
-//                     Login
-//                 </button>
-//
-//             </div>
-//         );
-//     }
-// }
-//
-// export default Home;
-
-
-function  Home () {
+function Home () {
     return (
         <div>
-            <div className="container">
+            <Navbar/>
+            <div className="container mt-5">
                 <h1>CV Gen</h1>
+                <button className="btn btn-dark">
+                    <NavLink className="login-btn" to="/login">Login</NavLink>
+                </button>
+                <button className="btn btn-dark">
+                    <NavLink className="login-btn" to="/register">Register</NavLink>
+                </button>
             </div>
-            <button>
-                <NavLink to="/to"> Logins </NavLink>
-            </button>
+            {/*<Logo/>*/}
         </div>
     )
 }
